@@ -1,0 +1,11 @@
+<h1> Item Index
+<table>
+  $forall Entity _ item <- items
+    <tr>
+      <td>#{itemName item}
+      <td>#{itemStocknum item}
+<hr>
+  <form method=post enctype=#{enctype}>
+    ^{itemWidget}
+    <div>
+      <input type=submit value="Post New Item">

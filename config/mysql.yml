@@ -1,0 +1,24 @@
+Default: &defaults
+  user: root
+  password: hoge
+  host: localhost
+  port: 3306
+  database: sample
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: sample_test
+  <<: *defaults
+
+Staging:
+  database: sample_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: sample_production
+  poolsize: 100
+  <<: *defaults
